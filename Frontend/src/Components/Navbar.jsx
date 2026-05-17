@@ -14,10 +14,12 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-center gap-3">
-          <input
-            placeholder="Search products..."
-            className="hidden sm:inline-flex w-72 rounded-full border border-slate-200 px-4 py-2 text-sm placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-400"
-          />
+          {user && (
+            <input
+              placeholder="Search products..."
+              className="hidden sm:inline-flex w-72 rounded-full border border-slate-200 px-4 py-2 text-sm placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-400"
+            />
+          )}
           {user ? (
             <button onClick={logout} className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-900 transition hover:bg-slate-50">
               Logout
